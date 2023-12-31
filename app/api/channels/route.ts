@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const { searchParams } = new URL(req.url);
 
     const serverId = searchParams.get("serverId");
-    console.log(serverId);
+
     if (!profile) return new NextResponse("Unauthorized", { status: 401 });
     if (!serverId) return new NextResponse("Missing serverId", { status: 400 });
     if (name === "general")
